@@ -1,8 +1,8 @@
 ![image](https://github.com/Mistire/MRN-hotel_booking_website/assets/96515111/2919e307-051f-43a0-a24e-0193d2c31be4)
-# MRN-hotel_booking_website
+# MIREN-hotel_booking_website
 ## Project Overview
 
-The MRN Hotel Booking Website is an online platform designed to help users search, compare, and book hotel accommodations conveniently. This README provides an overview of the project, its key features, and instructions for setting it up and running it.
+**MIREN** Hotel Booking Website is an online platform designed to help users search, compare, and book hotel accommodations conveniently. This README provides an overview of the project, its key features, and instructions for setting it up and running it.
 
 ## Key Features and Functionality
 
