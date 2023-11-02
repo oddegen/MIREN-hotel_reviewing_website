@@ -1,3 +1,4 @@
+![image](https://github.com/Mistire/MRN-hotel_booking_website/assets/96515111/2919e307-051f-43a0-a24e-0193d2c31be4)
 # MRN-hotel_booking_website
 ## Project Overview
 
