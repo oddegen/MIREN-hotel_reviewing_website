@@ -10,7 +10,7 @@ MIREN Hotel Reviewing Website is an online platform tailored for users to explor
 
 1. **Home Page:**
    - Main landing page with options to log in or sign up.
-   - User-friendly search bar for finding hotels by name.
+   - User-friendly search bar for finding hotels by name, price-range, location and rating.
    - Contact information provided via social media links.
 
 2. **Search Result Page:**
