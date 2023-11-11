@@ -4,31 +4,31 @@
 
 ## Project Overview:
 
-Welcome to MIREN Hotel Reviewing Website, a sophisticated online platform crafted to empower users in exploring, reviewing, and sharing their memorable hotel experiences. This README provides a comprehensive overview of the project, highlighting its key features, and offers step-by-step instructions for setting up and running the website.
+MIREN Hotel Reviewing Website is an online platform tailored for users to explore, review, and share their experiences with various hotels. This README provides an overview of the project, its key features, and instructions for setting it up and running it.
 
 ## Key Features and Functionality:
 
-### 1. Home Page:
-- The main landing page welcomes users with a clean interface, offering convenient options to log in or sign up.
-- A user-friendly search bar simplifies the process of finding hotels by name, enhancing the overall navigation experience.
-- Contact information is easily accessible through prominent social media links, fostering user engagement and communication.
+1. **Home Page:**
+   - Main landing page with options to log in or sign up.
+   - User-friendly search bar for finding hotels by name.
+   - Contact information provided via social media links.
 
-### 2. Search Result Page:
-- The Search Result Page dynamically displays hotels based on user queries, presenting relevant information such as ratings, location, and enticing images to aid in decision-making.
+2. **Search Result Page:**
+   - Displays search results for hotels with ratings, location, and images.
 
-### 3. Hotel Details Page:
-- Dive deep into the details of each hotel with a dedicated Hotel Details Page.
-- Users can leave comprehensive reviews, provide ratings, and share captivating images, contributing to a vibrant community of travelers.
+3. **Hotel Details Page:**
+   - Shows comprehensive information about a selected hotel.
+   - Allows users to leave detailed reviews, ratings, and upload images.
 
-### 4. Review Submission Page:
-- The Review Submission Page streamlines the process of sharing experiences, enabling users to submit thoughtful reviews, comments, and memorable photos.
+4. **Review Submission Page:**
+   - Allows users to submit reviews, including ratings, comments, and photos.
 
-### 5. About Us Section:
-- Explore the backstory of the organization or company driving this platform, delving into the mission, values, and history that shape the MIREN Hotel Reviewing Website.
+5. **About Us Section:**
+   - Provides information about the organization or company behind the website, including its mission, values, and history.
 
-### 6. FAQ Section:
-- Addressing common user inquiries, the Frequently Asked Questions (FAQ) section serves as a valuable resource for users, ensuring a smooth and informed user experience.
+6. **FAQ Section:**
+   - Addresses common user inquiries through a Frequently Asked Questions (FAQ) section.
 
-### 7. Responsiveness:
-- MIREN Hotel Reviewing Website is meticulously designed to be responsive across a range of devices, including desktops, tablets, and mobile phones, delivering a seamless and enjoyable user experience.
----
+7. **Responsiveness:**
+   - The website is designed to be responsive for a seamless user experience on various devices, including desktops, tablets, and mobile phones.
+--- --- ---
