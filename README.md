@@ -29,10 +29,4 @@ MIREN Hotel Reviewing Website is an online platform tailored for users to explor
 
 7. **Responsiveness:**
    - The website is designed to be responsive for a seamless user experience on various devices, including desktops, tablets, and mobile phones.
-
-## Getting Started:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/miren-hotel-reviewing.git
-   cd miren-hotel-reviewing
+---
