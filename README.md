@@ -1,33 +1,38 @@
-![image](https://github.com/Mistire/MRN-hotel_booking_website/assets/96515111/2919e307-051f-43a0-a24e-0193d2c31be4)
-# MIREN-hotel_booking_website
-## Project Overview
+# MIREN Hotel Reviewing Website
 
-**MIREN** Hotel Booking Website is an online platform designed to help users search, compare, and book hotel accommodations conveniently. This README provides an overview of the project, its key features, and instructions for setting it up and running it.
+## Project Overview:
 
-## Key Features and Functionality
+MIREN Hotel Reviewing Website is an online platform tailored for users to explore, review, and share their experiences with various hotels. This README provides an overview of the project, its key features, and instructions for setting it up and running it.
 
-- **Home Page:**
-  - The main landing page of the website with options to log in or sign up.
-  - A search bar for finding hotels by name.
-  - Contact information via social media links.
+## Key Features and Functionality:
 
-- **Search Result Page:**
-  - Displays search results for hotels with ratings, location, and images.
+1. **Home Page:**
+   - Main landing page with options to log in or sign up.
+   - User-friendly search bar for finding hotels by name.
+   - Contact information provided via social media links.
 
-- **Room Details Page:**
-  - Shows different room types within a selected hotel with detailed descriptions, pricing, photos, and availability.
-  - Allows users to choose and book their preferred room.
+2. **Search Result Page:**
+   - Displays search results for hotels with ratings, location, and images.
 
-- **Booking Page:**
-  - Finalizes the hotel room booking process.
-  - Collects information like check-in and check-out dates and additional service preferences.
-  - Securely collects payment information through a form for credit cards or other online payment options.
+3. **Hotel Details Page:**
+   - Shows comprehensive information about a selected hotel.
+   - Allows users to leave detailed reviews, ratings, and upload images.
 
-- **About Us Section:**
-  - Provides information about the organization or company behind the website, including its mission, values, and history.
+4. **Review Submission Page:**
+   - Allows users to submit reviews, including ratings, comments, and photos.
 
-- **FAQ Section:**
-  - Addresses common user inquiries through a Frequently Asked Questions (FAQ) section.
+5. **About Us Section:**
+   - Provides information about the organization or company behind the website, including its mission, values, and history.
 
-- **Responsiveness:**
-  - The website is designed to be responsive for a seamless user experience on various devices, including desktops, tablets, and mobile phones.
+6. **FAQ Section:**
+   - Addresses common user inquiries through a Frequently Asked Questions (FAQ) section.
+
+7. **Responsiveness:**
+   - The website is designed to be responsive for a seamless user experience on various devices, including desktops, tablets, and mobile phones.
+
+## Getting Started:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/miren-hotel-reviewing.git
+   cd miren-hotel-reviewing
