@@ -1,6 +1,6 @@
 ![image](https://github.com/Mistire/MIREN-hotel_reviewing_website/assets/96515111/ab47927a-eb74-498a-bb1a-701d164eb78f)
 
-# MIREN Hotel Reviewing Website
+# MIREN Reviews
 
 ## Project Overview:
 
