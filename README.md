@@ -4,7 +4,7 @@
 
 ## Project Overview:
 
-MIREN Hotel Reviewing Website is an online platform tailored for users to explore, review, and share their experiences with various hotels. This README provides an overview of the project, its key features, and instructions for setting it up and running it.
+MIREN Reviews is an online platform tailored for users to explore, review, and share their experiences with various hotels. This README provides an overview of the project, its key features, and instructions for setting it up and running it.
 
 ## Key Features and Functionality:
 
