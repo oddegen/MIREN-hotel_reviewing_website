@@ -7,6 +7,7 @@
 MIREN Reviews is an online platform tailored for users to explore, review, and share their experiences with various hotels. This README provides an overview of the project, its key features, and instructions for setting it up and running it.
 
 ## Key Features and Functionality:
+### Key Features
 
 1. **Home Page:**
    - Main landing page with options to log in or sign up.
@@ -31,4 +32,21 @@ MIREN Reviews is an online platform tailored for users to explore, review, and s
 
 7. **Responsiveness:**
    - The website is designed to be responsive for a seamless user experience on various devices, including desktops, tablets, and mobile phones.
---- --- ---
+
+
+### Functionalities:
+
+1. **Interactive Platform:**
+   - Establishing a user-friendly website with interactive features to showcase hotels, promoting accessibility regardless of geographical location.
+
+2. **Enhanced User Experience:**
+   - Offering a seamless browsing experience, enabling users to compare hotel amenities, access detailed descriptions, and save time by eliminating the need to visit multiple websites.
+
+3. **Visual Representation:**
+   - Prioritizing visual content such as photos and user-generated images to provide a realistic and immersive view of hotel spaces.
+
+4. **Real-time Reviews:**
+   - Implementing a real-time review system to ensure users have access to the latest and most relevant feedback from fellow travelers.
+
+5. **Personalization:**
+   - Providing users with the ability to personalize their searches based on preferences, such as amenities, location, and user ratings.
