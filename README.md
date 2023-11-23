@@ -50,4 +50,12 @@ MIREN Reviews is an online platform tailored for users to explore, review, and s
 
 5. **Personalization:**
    - Providing users with the ability to personalize their searches based on preferences, such as amenities, location, and user ratings.
-  ---
+
+## Getting Started
+### To get started with MIREN Reviews, follow these steps:
+
+#### Prerequisites
+- Node.js installed on your machine
+- npm package manager
+#### Installation
+Clone the repository:
