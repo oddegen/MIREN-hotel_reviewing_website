@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search-results</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <ul>
+        <li>
+          <a href="#">
+            <img class="img-logo" src="img/logo.png" alt="logo">
+          </a>
+        </li>
+        <li><a href="#">Search for</a></li>
+        <li><a href="#">Explore popular</a></li>
+        <li><a href="#">Discover</a></li>
+      </ul>
+    </div>
+    <div class="menu">
+      <ul>
+        <li>
+          <a class="results-btn" href="#">Create account</a>
+        </li>
+        <li>
+          <a class="results-btn" href="#">Login</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="search-results-container">
+    <aside class="aside-section">
+      <form class="search-filters" action="#">
+        <p>Popular filters</p>
+        <input type="checkbox" id="economical" name="economical">
+        <label for="economical">Economical</label><br>
+        <input type="checkbox" id="airport" name="airport">
+        <label for="airport">Complementary airport</label><br>
+        <input type="checkbox" id="youth" name="youth">
+        <label for="youth">youth hotel</label><br>
+        <br>
+        <p>Nightly Rate</p>
+        <input type="radio" id="$50" name="nightly-rate">
+        <label for="$50">Under $50</label><br>
+
+        <input type="radio" id="$50-$100" name="nightly-rate">
+        <label for="$50-$100">$50-$100</label><br>
+
+        <input type="radio" id="$100-$150" name="nightly-rate">
+        <label for="$100-$150">$100-$150</label><br>
+
+        <input type="radio" id="u$150" name="nightly-rate">
+        <label for="u$150 and above">$150 and above</label><br>
+        <br>
+        <p>Guest Satisfaction</p>
+        <input type="radio" id="any" name="guest-satisfaction">
+        <label for="any">any rating</label><br>
+
+        <input type="radio" id="exelent" name="guest-satisfaction">
+        <label for="exelent">exelent rating</label><br>
+
+        <input type="radio" id="very-good" name="guest-satisfaction">
+        <label for="very-good">very good rating</label><br>
+
+        <input type="radio" id="good" name="guest-satisfaction">
+        <label for="good and above">good rating</label><br>
+        <br>
+
+      </form>
+
+    </aside>
+    <main class="main-results">
+      <div>
+        <p class="showing-amount" style="font-size: 10px;">Showing 20 results for Copenhagen</p>
+        <div class="main-header">
+          <h2>Hotels with breakfast included</h2>
+          <select id="sort-by" name="sort-by" class="sort-option">
+            <option value="jj" disabled selected>sort by</option>
+            <option value="option1">option1</option>
+            <option value="option2">option2</option>
+            <option value="option3">option3</option>
+          </select> 
+        </div>
+      </div>
+      <div class="hotel-info">
+        <img class="hotel-photo" src="img/logo.png" alt="hotell image">
+        <div class="details-left">
+          <h4 class="hotel-name">Hotel Norrebro international hotel</h4>
+          <div >
+            <p class="distance">0.4 km from city center</p>
+          </div>
+          <p class="map-link"><a href="./map.html">show on map</a></p>
+          <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo, </p>
+        </div>
+        <div class="details-right">
+          <div class="review-score">
+            <div class="score-info">
+              <h6>Review score</h6>
+              <p>1 review</p>
+            </div>
+            <span class="results-btn rating-point">4.0</span>
+          </div>
+          <button class="results-btn show-price">show prices</button>
+        </div>
+      </div>
+      <div class="hotel-info">
+        <img class="hotel-photo" src="img/logo.png" alt="hotell image">
+        <div class="details-left">
+          <h4 class="hotel-name">Hotel Norrebro international hotel</h4>
+          <div >
+            <p class="distance">0.4 km from city center</p>
+          </div>
+          <p class="map-link"><a href="./map.html">show on map</a></p>
+          <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo, </p>
+        </div>
+        <div class="details-right">
+          <div class="review-score">
+            <div class="score-info">
+              <h6>Review score</h6>
+              <p>1 review</p>
+            </div>
+            <span class="results-btn rating-point">4.0</span>
+          </div>
+          <button class="results-btn show-price">show prices</button>
+        </div>
+      </div>
+      <div class="hotel-info">
+        <img class="hotel-photo" src="img/logo.png" alt="hotell image">
+        <div class="details-left">
+          <h4 class="hotel-name">Hotel Norrebro international hotel</h4>
+          <div >
+            <p class="distance">0.4 km from city center</p>
+          </div>
+          <p class="map-link"><a href="./map.html">show on map</a></p>
+          <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo, </p>
+        </div>
+        <div class="details-right">
+          <div class="review-score">
+            <div class="score-info">
+              <h6>Review score</h6>
+              <p>1 review</p>
+            </div>
+            <span class="results-btn rating-point">4.0</span>
+          </div>
+          <button class="results-btn show-price">show prices</button>
+        </div>
+      </div>
+      <div class="hotel-info">
+        <img class="hotel-photo" src="img/logo.png" alt="hotell image">
+        <div class="details-left">
+          <h4 class="hotel-name">Hotel Norrebro international hotel</h4>
+          <div >
+            <p class="distance">0.4 km from city center</p>
+          </div>
+          <p class="map-link"><a href="./map.html">show on map</a></p>
+          <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo, </p>
+        </div>
+        <div class="details-right">
+          <div class="review-score">
+            <div class="score-info">
+              <h6>Review score</h6>
+              <p>1 review</p>
+            </div>
+            <span class="results-btn rating-point">4.0</span>
+          </div>
+          <button class="results-btn show-price">show prices</button>
+        </div>
+      </div>
+      <div class="hotel-info">
+        <img class="hotel-photo" src="img/logo.png" alt="hotell image">
+        <div class="details-left">
+          <h4 class="hotel-name">Hotel Norrebro international hotel</h4>
+          <div >
+            <p class="distance">0.4 km from city center</p>
+          </div>
+          <p class="map-link"><a href="./map.html">show on map</a></p>
+          <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo, </p>
+        </div>
+        <div class="details-right">
+          <div class="review-score">
+            <div class="score-info">
+              <h6>Review score</h6>
+              <p>1 review</p>
+            </div>
+            <span class="results-btn rating-point">4.0</span>
+          </div>
+          <button class="results-btn show-price">show prices</button>
+        </div>
+      </div>
+      <div class="hotel-info">
+        <img class="hotel-photo" src="img/logo.png" alt="hotell image">
+        <div class="details-left">
+          <h4 class="hotel-name">Hotel Norrebro international hotel</h4>
+          <div >
+            <p class="distance">0.4 km from city center</p>
+          </div>
+          <p class="map-link"><a href="./map.html">show on map</a></p>
+          <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo, </p>
+        </div>
+        <div class="details-right">
+          <div class="review-score">
+            <div class="score-info">
+              <h6>Review score</h6>
+              <p>1 review</p>
+            </div>
+            <span class="results-btn rating-point">4.0</span>
+          </div>
+          <button class="results-btn show-price">show prices</button>
+        </div>
+      </div>
+
+      <div class="page-navigation">
+          <span class="page-btn">1</span>
+          <span class="page-btn active">2</span>
+          <span class="page-btn">3</span>
+      </div>
+    </main>
+  </div>
+  <footer class="footer-section">
+
+  </footer>
+    
+</body>
+</html>
