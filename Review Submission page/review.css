@@ -57,21 +57,21 @@ border: 1px solid #ccc;
 border-radius: 5px;
 }
 
-  .form-group {
-      margin-bottom: 15px;
-    }
-    
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
-    
-    
-    input[type='checkbox'] {
-      margin-right: 5px;
-      margin-bottom: 20px;
-    }
-    
-    .checkbox-group label {
-      display: inline-block;
-    }
+.form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+
+  input[type='checkbox'] {
+    margin-right: 5px;
+    margin-bottom: 20px;
+  }
+
+  .checkbox-group label {
+    display: inline-block;
+  }
