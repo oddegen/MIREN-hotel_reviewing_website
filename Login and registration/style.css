@@ -21,6 +21,7 @@
   background: #fff;
   padding: 5px;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .button-box {
