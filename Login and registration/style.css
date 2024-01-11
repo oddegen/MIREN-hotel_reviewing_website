@@ -14,8 +14,8 @@
 }
 
 .form-box {
-  width: 380px;
-  height: 480px;
+  width: 400px;
+  height: 500px;
   position: relative;
   margin: 6% auto;
   background: #fff;
@@ -51,17 +51,17 @@
   transition: .5s;
 }
 
-.socila-icons {
-  margin: 30px auto;
+.social-icons {
+  margin: 12px auto;
   text-align: center;
 }
 
 .social-icons img {
-  width: 30px;
+  width: 20px;
   margin: 0 12px;
   box-shadow: 0 0 20px #7f7f7f3d;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 100%;
 }
 
 .input-group {
@@ -84,7 +84,9 @@
 }
 
 .submit-btn {
-  width: 85%;
+  width: 86%;
+  margin-left: 7%;
+  margin-right: 7%;
   padding: 10px 30px;
   cursor: pointer;
   display: block;
