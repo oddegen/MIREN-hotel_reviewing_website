@@ -10,9 +10,9 @@
   <div class="hero">
     <div class="form-box">
       <div class="button-box">
-        <div id="btn" onclick="btn()"></div>
-        <button type="button" class="toggle-btn">Log In</button>
-        <button type="button" class="toggle-btn">Register</button>
+        <div id="btn"></div>
+        <button type="button" class="toggle-btn" onclick="login()" >Log In</button>
+        <button type="button" class="toggle-btn" onclick="register()" >Register</button>
       </div>
       <div class="social-icons">
         <img src="" alt="">
@@ -25,7 +25,7 @@
         <input type="checkbox" class="check-box"> <span>Remember password</span>
         <button type="submit" class="submit-btn">Log In</button>
       </form>
-      <form action="" class="input-group" onclick="register()" id="register">
+      <form action="" class="input-group" id="register">
         <input type="text" class="input-field" placeholder="Email ID" required>
         <input type="text" class="input-field" placeholder="Enter Password">
         <input type="checkbox" class="check-box"> <span>I agree to the terms and condition</span>
@@ -36,14 +36,19 @@
 
 
   <script>
-    let x = document.getElementById("login");
-    let y = document.getElementById("register");
-    let z = document.getElementById("btn");
+    let log = document.getElementById("login");
+    let reg = document.getElementById("register");
+    let btnn = document.getElementById("btn");
 
     function register() {
-      login.style.left = "-400px";
-      register.style.left = "50px";
-      btn.style.left = "110px";
+      log.style.left = "-400px";
+      reg.style.left = "50px";
+      btnn.style.left = "110px";
+    }
+    function login() {
+      log.style.left = "50px";
+      reg.style.left = "450px";
+      btnn.style.left = "0";
     }
   </script>
 </body>
