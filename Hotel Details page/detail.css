@@ -84,7 +84,7 @@ header{
     background-color: rgb(199, 44, 70);
   }
   .button .button1:hover {
-    background-color: rgb(199, 44, 70);
+    background-color: #c72c46;
   }
   .icon1 {
     display: flex;
