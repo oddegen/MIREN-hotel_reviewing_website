@@ -1,52 +1,57 @@
 * {
   font-family: sans-serif;
-  font-size: 15px;
-
-img {
-  width: 100%;
+  color: #343a40;
 }
 
+p {
+  max-width: 85ch;
 }
+
 h1 {
   font-size: 50px;
   text-align: center;
-  font-weight: bold;
+  color: #364034af;
 }
 h2 {
   font-size: 35px;
   text-align: center;
+  color: #364034af;
+}
+h3 {
+  font-size: 25px;
+  text-align: center;
+  color: #364034af;
 }
 
-a:link {
-  font-size: 13px;
-  padding-right: 10px;
-  color: black;
-  background-color: transparent;
-  text-decoration: none;
-  font-weight: bold;
+body {
+  background-color: #f1f8fd;
 }
 
+a:link,
 a:visited {
-  color: black;
-  background-color: transparent;
+  background-color: white;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   text-decoration: none;
+  border-width: 1px;
+  border-radius: 4px;
 }
-
 a:hover {
-  color: white;
-  background-color: rgb(139, 245, 164);
+  font-size: 17px;
   text-decoration: underline;
+  box-shadow: 2px 3px 5px rgb(87, 87, 87);
+  background-color: #e7f5ff;
 }
-
 a:active {
-  color: yellow;
-  background-color: transparent;
+  font-size: 18px;
+  background-color: rgba(255, 3, 3, 0.494);
+  box-shadow: 2px 3px 10px;
   text-decoration: underline;
 }
-header {
-  padding: 30px;
-}
-
 .SignUp {
   font-weight: bold;
   float: right;
@@ -55,77 +60,141 @@ header {
   border-radius: 8px;
   cursor: pointer;
   font-size: 12px;
+  align-items: flex-end;
+  box-shadow: 0px 3px 12px 1px #adb5bd;
+  background-color: red;
+  color: white;
 }
-.section1 {
-  padding-top: 60px;
-  padding: bottom 50px;
-  align-items: right;
-  text-align: center;
+.links {
+  display: flex;
+  align-items: center;
+}
+header {
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 400px 1fr 100px;
+  background-color: white;
+}
+.Signup,
+.links,
+.logo {
+  background-color: white;
+}
+img {
+  width: 400px;
+}
+.SignUp:hover {
+  font-size: 13.5px;
+  box-shadow: 1px 3px 12px 1px #adb5bd;
 }
 .welcome {
-  margin-bottom: 0px;
+  padding-top: 50px;
+  margin-top: 0px;
+  text-shadow: 2px 3px 5px rgb(130, 130, 130);
 }
-.discover {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  font-size: 12px;
+
+.first-section {
+  padding-bottom: 50px;
 }
-.join {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin-bottom: 80px;
-  padding-left: 25px;
-  padding-right: 25px;
-  border: none;
-  font-weight: bold;
+
+.about-MIREN {
+  font-size: 22px;
+  padding: 20px;
+  padding-top: 30px;
+  font-size: 18px;
+  line-height: 2em;
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr 2fr;
+  justify-content: center;
 }
 .all-team-buttons {
-  margin-top: 0px;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
-.column {
-  float: left;
-  width: auto;
-  padding: 0px;
+.team-button {
+  box-shadow: 1px 2px 6px #adb5bd;
+  color: #343a40;
+  font-weight: bold;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 20px;
 }
-.column-content {
-  font-size: 15px;
+.team-button:hover {
+  background-color: rgb(232, 102, 102);
+  color: black;
+  box-shadow: 2px 2px 8px #adb5bd;
+  text-align: center;
+  border: none;
+  font-size: 14px;
 }
-.section1 {
-  position: relative;
-  top: 80px;
+.join {
+  padding-top: 50px;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
 }
-.section21 {
+.join-button {
+  font-size: medium;
+  background-color: rgb(232, 102, 102);
+  color: white;
+  box-shadow: 3px 2px 6px #adb5bd;
+  text-align: center;
+  padding: 10px 20px;
+  justify-content: center;
+  border-radius: 12px;
+  border: none;
+}
+.join-button:hover {
+  color: #343a40;
+  background-color: rgb(237, 62, 62);
+  box-shadow: 3px 2px 10px #adb5bd;
+}
+.missions {
   align-items: center;
+  justify-items: center;
+  justify-content: space-between;
   display: grid;
-  grid-template-columns: 35% 35% 35%;
-  padding-bottom: 100px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-.img1 {
-  opacity: 0.8;
-  width: 600px;
+.mission {
+  line-height: 2em;
+  padding-top: 40px;
   text-align: center;
-  border-radius: 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 16px #adb5bd;
+  margin-left: 20px;
+  margin-right: 20px;
 }
-.section2 {
-  display: grid;
-  place-content: center;
-  padding-top: 100px;
-  background-color: rgb(247, 247, 247);
-  text-align: center;
+
+.mission-content {
+  padding: 10px;
+  align-content: center;
+  justify-items: center;
 }
-.all-icon-info {
+
+.last-section {
+  padding-top: 50px;
+  font-size: 32px;
+  align-items: center;
+  justify-content: space-around;
   display: grid;
-  margin-left: 300px;
-  width: 640px;
+}
+
+.all-icon-lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
   place-items: center;
 }
 .icon-info {
+  font-size: 10px;
   width: 160px;
   font-size: 80px;
   height: 160px;
@@ -135,56 +204,185 @@ header {
 .icon-p {
   font-size: 15px;
 }
-.about-MIREN {
-  margin-top: 100px;
-  margin-bottom: 150px;
-}
-.team-button {
-  background-color: rgb(255, 38, 0);
-  color: white;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 12px;
-}
 .section3 {
   display: grid;
+  font-size: 20px;
   place-items: center;
-  align-items: right;
   text-align: center;
 }
+.middle_section {
+  padding: 80px;
+  background-color: #e7f5ff;
+}
+.middle_section11 {
+  padding: 40px;
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(3, 450px);
+  gap: 20px;
+  justify-content: center;
+}
+.middle_section11 li {
+  font-size: 18px;
+  list-style: none;
+  list-style-type: none;
+}
 .team {
-  margin-right: 500px;
-  width: 500px;
+  padding-top: 50px;
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
-  margin-left: 300px;
   width: 640px;
-  grid-gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
-  place-items: center;
 }
+.Team {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
+}
+
 .img2 {
-  height: 200px;
-  border-radius: 15px;
+  width: 175px;
+  border-radius: 50%;
 }
 .team-member {
   width: 220px;
-  image-rendering: 10px;
+  font-size: 12px;
 }
 .footer {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr;
+  font-size: 15px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
 }
-.footer-e1 {
-  text-align: left;
+.footer11 {
+  font-style: var(#364034af);
 }
-.footer-e2 {
+.footer13 {
+  display: flex;
+  justify-content: end;
+  align-items: end;
   float: right;
-  text-align: right;
+}
+
+@media (min-width: 750px) and (max-width: 1025px) {
+  header {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 200px 1fr 100px;
+    background-color: white;
+  }
+  h1 {
+    font-size: 45px;
+  }
+  .material-icons {
+    font-size: 2rem;
+  }
+
+  a:link,
+  a:visited {
+    padding: 2px 7px;
+  }
+  .SignUp {
+    padding: 12px 22px;
+  }
+  .middle_section11 li {
+    font-size: 15px;
+    list-style: none;
+    list-style-type: none;
+  }
+  .middle_section11 {
+    padding: 20px;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, 300px);
+    gap: 10px;
+    justify-content: center;
+  }
+  .middle_section {
+    padding: 50px;
+  }
+  .team {
+    padding-top: 50px;
+    display: flex;
+  }
+  .Team {
+    display: flex;
+    place-items: center;
+    text-align: center;
+  }
+  .img1 {
+    width: 200px;
+  }
+  .img2 {
+    width: 120px;
+  }
+  .footer {
+    font-size: 12px;
+  }
+  p {
+    font-size: 85%;
+  }
+}
+@media (max-width: 750px) {
+  header {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 150px 1fr 80px;
+    background-color: white;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  .material-icons {
+    font-size: 1.2rem;
+  }
+
+  a:link,
+  a:visited {
+    padding: 2px 5px;
+  }
+  .SignUp {
+    padding: 10px 20px;
+  }
+  .middle_section11 li {
+    font-size: 10px;
+    list-style: none;
+    list-style-type: none;
+  }
+  .middle_section11 {
+    padding: 10px;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, 200px);
+    gap: 4px;
+    justify-content: center;
+  }
+  .middle_section {
+    padding: 25px;
+  }
+  .team {
+    padding-top: 50px;
+    display: flex;
+  }
+  .Team {
+    display: flex;
+    place-items: center;
+    text-align: center;
+  }
+  .img1 {
+    width: 150px;
+  }
+  .img2 {
+    width: 100px;
+  }
+  .footer {
+    font-size: 8px;
+  }
+  p {
+    font-size: 75%;
+  }
 }
