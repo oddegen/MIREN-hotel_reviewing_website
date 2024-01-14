@@ -7,6 +7,10 @@
     margin-right: 10%;
     margin-left: 3%;
   }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
   
   .right-section {
     flex: 1;
@@ -115,9 +119,6 @@
   .review-text {
     margin-top: 5px;
   }
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-  }
+
   
   
