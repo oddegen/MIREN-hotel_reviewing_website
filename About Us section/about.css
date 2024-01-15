@@ -80,6 +80,12 @@ header {
 .logo {
   background-color: white;
 }
+.img1 {
+  width: 150px;
+  position: absolute;
+  top: 4%;
+  left: 2%;
+}
 img {
   width: 400px;
 }
@@ -262,10 +268,7 @@ img {
   font-style: var(#364034af);
 }
 .footer13 {
-  display: flex;
-  justify-content: end;
-  align-items: end;
-  float: right;
+  text-align: end;
 }
 
 @media (min-width: 750px) and (max-width: 1025px) {
@@ -314,9 +317,7 @@ img {
     place-items: center;
     text-align: center;
   }
-  .img1 {
-    width: 200px;
-  }
+
   .img2 {
     width: 120px;
   }
@@ -365,13 +366,20 @@ img {
     padding: 25px;
   }
   .team {
-    padding-top: 50px;
     display: flex;
+    justify-content: center;
+  }
+  .nahom {
+    margin: 0 auto;
+    display: none;
   }
   .Team {
-    display: flex;
-    place-items: center;
-    text-align: center;
+    display: grid;
+  place-items: center;
+  text-align: center;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
   }
   .img1 {
     width: 150px;

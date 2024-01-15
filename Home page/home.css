@@ -8,7 +8,9 @@
     - The "symbol *" part is to solve Firefox SVG sprite bug
     - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
  */
-*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
   all: unset;
   display: revert;
 }
@@ -373,7 +375,8 @@ header {
 
 /* gonna expand on the utlity class later */
 .banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), #9d616b), url(./assets/images/hotel-7540353_1920.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #9d616b),
+    url(./assets/images/hotel-7540353_1920.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -449,12 +452,6 @@ header {
   }
 }
 
-.home {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
 .nav-logo {
   height: 30px;
   width: auto;
@@ -527,8 +524,10 @@ input {
   font-size: 0.875rem;
   background-color: transparent;
   border-color: var(--input);
-  box-shadow: var(--ring-offset-shadow, 0 0 #0000), var(--ring-shadow, 0 0 #0000), var(--shadow);
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  box-shadow: var(--ring-offset-shadow, 0 0 #0000),
+    var(--ring-shadow, 0 0 #0000), var(--shadow);
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.15s;
   position: relative;
@@ -565,7 +564,8 @@ input:focus {
   border-radius: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.15s;
   white-space: nowrap;
