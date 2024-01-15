@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=div" class="review-s">
-    <link rel="stylesheet" href="chat.css"></head>
-    <body>
-        <div class="review-submission">
-            <div class="left-section">
-                <h2><pre>               Review Submission         </pre></h2>
-              <form action="results.html" method="GET">
-                    <div class="checkbox">
-                    <label>Review Type</label>
-                    <div class="checkbox-group">
-                    <label class="checkk" for="positive">Positive:</label>
-                  <input type="radio" id="positive" name="choice" value="positive">
-            
-                  <label class="checkk" for="negative">Negative:</label>
-                  <input type="radio" id="negative" name="choice" value="negative">
-                  </div></div>
-                  <label for="email">Email:</label>
-      <input type="email" id="email" name="email" maxlength="12" minlength="30" required>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/Review Submission page/review.css">
+  <title>Review Submission page</title>
+</head>
+<body>
+  <div class="container">
+    <h2><pre>               Review Submission         </pre></h2>
+    <form action="results.html" method="GET">
+        <div class="checkbox">
+        <label>Review Type</label>
+        <div class="checkbox-group">
+        <label for="positive">Positive:</label>
+      <input type="radio" id="positive" name="choice" value="positive">
+
+      <label for="negative">Negative:</label>
+      <input type="radio" id="negative" name="choice" value="negative">
+      </div></div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
 
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
