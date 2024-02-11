@@ -11,48 +11,35 @@
     <div class="form-box">
       <div class="button-box">
         <div id="btn"></div>
-        <button type="button" class="toggle-btn" onclick="login()" >Log In</button>
-        <button type="button" class="toggle-btn" onclick="register()" >Register</button>
+        <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+        <button type="button" class="toggle-btn" onclick="register()">Register</button>
       </div>
       <div class="social-icons">
         <img src="images/google.svg" alt="">
         <img src="images/facebook.svg" alt="">
         <img src="images/x-twitter.svg" alt="">
       </div>
-      <form action="" class="input-group" onclick="login()" id="login">
-        <input type="text" class="input-field" placeholder="Enter username" required>
-        <input type="password" class="input-field" placeholder="Enter Password">
+      <form action="login.php" method="get" class="input-group" id="login-form">
+        <input type="text" id="login-username" class="input-field" placeholder="Enter username" required>
+        <input type="password" id="login-password" class="input-field" placeholder="Enter Password" required>
         <input type="checkbox" class="check-box"> <span>Remember password</span>
         <button type="submit" class="submit-btn">Log In</button>
       </form>
 
-      <form action="" class="input-group" id="register">
-        <input type="text" class="input-field" placeholder="Enter username" required>
-        <input type="email" class="input-field" placeholder="Enter email" required>
-        <input type="password" class="input-field" placeholder="Enter Password" required>
-        <input type="password" class="input-field" placeholder="Confirm Password" required>
-        <input type="checkbox" class="check-box"> <span>I agree to the terms and condition</span>
+      <form action="register.php" method="get" class="input-group" id="register-form">
+        <input type="text" id="register-username" class="input-field" placeholder="Enter username" required>
+        <input type="email" id="register-email" class="input-field" placeholder="Enter email" required>
+        <input type="password" id="register-password" class="input-field" placeholder="Enter Password" required>
+        <input type="password" id="confirm-password" class="input-field" placeholder="Confirm Password" required>
+        <input type="checkbox" id="agree-checkbox" class="check-box"> <span>I agree to the terms and condition</span>
         <button type="submit" class="submit-btn">Register</button>
       </form>
+
+      <div id="success-message" style="display: none; color: green; margin-top: 10px;">Registration successful! You can now log in.</div>
+
     </div>
   </div>
 
-
-  <script>
-    let log = document.getElementById("login");
-    let reg = document.getElementById("register");
-    let btnn = document.getElementById("btn");
-
-    function register() {
-      log.style.left = "-400px";
-      reg.style.left = "50px";
-      btnn.style.left = "110px";
-    }
-    function login() {
-      log.style.left = "50px";
-      reg.style.left = "450px";
-      btnn.style.left = "0";
-    }
-  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
