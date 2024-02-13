@@ -1,0 +1,19 @@
+{
+  "name": "miren-hotel_reviewing_website",
+  "description": "![image](https://github.com/Mistire/MIREN-hotel_reviewing_website/assets/96515111/ab47927a-eb74-498a-bb1a-701d164eb78f)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "json-server": "^0.17.4"
+  },
+  "scripts": {
+    "start": "json-server --watch db.json --port 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "toastify-js": "^1.12.0"
+  }
+}

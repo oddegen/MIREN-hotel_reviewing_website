@@ -1,0 +1,22 @@
+{
+  "hotels": [
+    {
+      "hotel_name": "Bomb",
+      "hotel_location": "Addis Ababa",
+      "hotel_address": "Lafto",
+      "hotel_phone": "0916937689",
+      "hotel_email": "cozy@hotel.com",
+      "hotel_website": "",
+      "hotel_description": "uy8t67tuih",
+      "hotel_images": "sample-photo5.jpeg",
+      "number_of_rooms": "798",
+      "room_types": "Single,Double",
+      "room_fee": "232",
+      "other_amenities_text": "",
+      "other_services_text": "",
+      "attractions": "",
+      "special_offers": "",
+      "id": 1
+    }
+  ]
+}
