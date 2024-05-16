@@ -17,7 +17,7 @@
       <menu class="flex-container space-between p-5 vertical-align-center">
         <div class="flex-container gap-2x">
           <li>
-            <a href="#">
+            <a href="../Home page/home.html">
               <img
                 class="nav-logo"
                 src="../Home page/assets/miren-reviews-high-resolution-logo-black-transparent.png"
@@ -32,245 +32,317 @@
           <li><a href="#">Popular</a></li>
         </div>
         <div class="flex-container gap-2x">
-          <a href="/Login and registration/index.html" class="bg-red fs-300 text-primary-400 px-2py-6 round">Login</a>
-          <a href="/Login and registration/index.html" class="bg-red fs-300 text-primary-400 px-2py-6 round">Sign Up</a>
+          <a
+            href="/Login and registration/index.html"
+            class="bg-red fs-300 text-primary-400 px-2py-6 round"
+            >Login</a
+          >
+          <a
+            href="/Login and registration/index.html"
+            class="bg-red fs-300 text-primary-400 px-2py-6 round"
+            >Sign Up</a
+          >
         </div>
       </menu>
     </nav>
 
     <div>
-      <form action="http://localhost:3000/hotels" method="post" class="form" onsubmit="return submitForm(this)">
-        <div class="form-child">
-          <label for="hotel_name">Hotel Name*:</label>
-          <input type="text" id="hotel_name" name="hotel_name" required />
-        </div>
+      <form
+        id="form"
+        action="http://localhost:3000/hotels"
+        target="_blank"
+        method="post"
+      >
+        <label for="hotel_name">Hotel Name*:</label><br />
+        <input type="text" id="hotel_name" name="hotel_name" required />
 
-        <div class="form-child">
-          <label for="hotel_location">Hotel Location (City, Country)*:</label>
-          <input type="text" id="hotel_location" name="hotel_location" required />
-        </div>
+        <label for="hotel_location">Hotel Location (City, Country)*:</label
+        ><br />
+        <input type="text" id="hotel_location" name="hotel_location" required />
 
-        <div class="form-child">
-          <label for="hotel_address">Hotel Address*:</label>
-          <input type="text" id="hotel_address" name="hotel_address" required />
-        </div>
+        <label for="hotel_address">Hotel Address*:</label><br />
+        <input type="text" id="hotel_address" name="hotel_address" required />
 
-        <div class="form-child">
-          <label for="hotel_phone">Hotel Phone*:</label>
-          <input
-            type="tel"
-            id="hotel_phone"
-            name="hotel_phone"
-            required
-            pattern="([0-9]{3}-[0-9]{3}-[0-9]{4})|([0-9]{10})"
-            placeholder="eg. 091-235-4567"
-          />
-        </div>
+        <label for="hotel_phone">Hotel Phone*:</label><br />
+        <input
+          type="tel"
+          id="hotel_phone"
+          name="hotel_phone"
+          required
+          pattern="([0-9]{3}-[0-9]{3}-[0-9]{4})|([0-9]{10})"
+          placeholder="eg. 091-235-4567"
+        />
 
-        <div class="form-child">
-          <label for="hotel_email">Hotel Email*:</label>
-          <input type="email" id="hotel_email" name="hotel_email" required />
-        </div>
+        <label for="hotel_email">Hotel Email*:</label><br />
+        <input type="email" id="hotel_email" name="hotel_email" required />
 
-        <div class="form-child">
-          <label for="hotel_website">Hotel Website(optional):</label>
-          <input type="url" id="hotel_website" name="hotel_website" />
-        </div>
+        <label for="hotel_website">Hotel Website(optional):</label><br />
+        <input type="url" id="hotel_website" name="hotel_website" />
 
-        <div class="form-child">
-          <label for="hotel_description">Hotel Description*:</label>
-          <textarea id="hotel_description" name="hotel_description" rows="4" cols="50" required></textarea>
-        </div>
+        <label for="hotel_description">Hotel Description*:</label><br />
+        <textarea
+          id="hotel_description"
+          name="hotel_description"
+          rows="4"
+          cols="50"
+          required
+        ></textarea>
 
-        <div class="form-child">
-          <label for="hotel_images"
-            >Hotel Images (Upload high-quality images showcasing rooms, facilities, and surroundings)*:</label
-          >
-          <input type="file" id="hotel_images" name="hotel_images" accept="image/*" multiple required />
-        </div>
+        <label for="hotel_images"
+          >Hotel Images (Upload high-quality images showcasing rooms,
+          facilities, and surroundings)*:</label
+        ><br />
+        <input
+          type="file"
+          id="hotel_images"
+          name="hotel_images"
+          accept="image/*"
+          multiple
+          required
+        />
 
-        <div class="form-child">
-          <label for="number_of_rooms">Number of Rooms:</label>
-          <input type="number" id="number_of_rooms" name="number_of_rooms" required min="1" />
-        </div>
+        <label for="number_of_rooms">Number of Rooms:</label><br />
+        <input
+          type="number"
+          id="number_of_rooms"
+          name="number_of_rooms"
+          required
+          min="1"
+        />
 
-        <div class="form-child">
-          <label for="room_types">Room Types Available (comma-separated):</label>
-          <input
-            type="text"
-            id="room_types"
-            name="room_types"
-            required
-            placeholder="e.g., Single, Double, Suite, etc."
-          />
-        </div>
-        <div class="form-child">
-          <label for="room_fee">Room Fee (in USD):</label>
-          <input
-            type="text"
-            id="room_fee"
-            name="room_fee"
-            pattern="^\d+(?:\.\d+)?$"
-            title="Please enter a valid USD amount"
-            placeholder="Enter room fee"
-          />
-        </div>
-        <div class="form-child">
-          <label>Room Amenities (Check all that apply):</label>
-          <div class="checkbox">
-            <div>
-              <input type="checkbox" id="air_conditioning" name="room_amenities[]" value="Air Conditioning" />
-              <label for="air_conditioning">Air Conditioning</label>
-            </div>
+        <label for="room_types">Room Types Available (comma-separated):</label
+        ><br />
+        <input
+          type="text"
+          id="room_types"
+          name="room_types"
+          required
+          placeholder="e.g., Single, Double, Suite, etc."
+        />
 
-            <div>
-              <input type="checkbox" id="free_wifi" name="room_amenities[]" value="Free Wi-Fi" />
-              <label for="free_wifi">Free Wi-Fi</label>
-            </div>
+        <label for="room_fee">Room Fee (in USD):</label><br />
+        <input
+          type="text"
+          id="room_fee"
+          name="room_fee"
+          pattern="^\d+(?:\.\d+)?$"
+          title="Please enter a valid USD amount"
+          placeholder="Enter room fee"
+        />
 
-            <div>
-              <input type="checkbox" id="television" name="room_amenities[]" value="Television" />
-              <label for="television">Television</label>
-            </div>
+        <label>Room Amenities (Check all that apply):</label><br />
+        <input
+          type="checkbox"
+          id="air_conditioning"
+          name="room_amenities[]"
+          value="Air Conditioning"
+        />
+        <label for="air_conditioning">Air Conditioning</label><br />
 
-            <div>
-              <input type="checkbox" id="mini_fridge" name="room_amenities[]" value="Mini Fridge" />
-              <label for="mini_fridge">Mini Fridge</label>
-            </div>
+        <input
+          type="checkbox"
+          id="free_wifi"
+          name="room_amenities[]"
+          value="Free Wi-Fi"
+        />
+        <label for="free_wifi">Free Wi-Fi</label><br />
 
-            <div>
-              <input type="checkbox" id="coffee_maker" name="room_amenities[]" value="Coffee/Tea Maker" />
-              <label for="coffee_maker">Coffee/Tea Maker</label>
-            </div>
+        <input
+          type="checkbox"
+          id="television"
+          name="room_amenities[]"
+          value="Television"
+        />
+        <label for="television">Television</label><br />
 
-            <div>
-              <input type="checkbox" id="safe" name="room_amenities[]" value="Safe" />
-              <label for="safe">Safe</label>
-            </div>
+        <input
+          type="checkbox"
+          id="mini_fridge"
+          name="room_amenities[]"
+          value="Mini Fridge"
+        />
+        <label for="mini_fridge">Mini Fridge</label><br />
 
-            <div>
-              <input type="checkbox" id="iron_board" name="room_amenities[]" value="Iron/Ironing Board" />
-              <label for="iron_board">Iron/Ironing Board</label>
-            </div>
+        <input
+          type="checkbox"
+          id="coffee_maker"
+          name="room_amenities[]"
+          value="Coffee/Tea Maker"
+        />
+        <label for="coffee_maker">Coffee/Tea Maker</label><br />
 
-            <div>
-              <input type="checkbox" id="hairdryer" name="room_amenities[]" value="Hairdryer" />
-              <label for="hairdryer">Hairdryer</label>
-            </div>
+        <input type="checkbox" id="safe" name="room_amenities[]" value="Safe" />
+        <label for="safe">Safe</label><br />
 
-            <div>
-              <input type="checkbox" id="bathrobe_slippers" name="room_amenities[]" value="Bathrobe/Slippers" />
-              <label for="bathrobe_slippers">Bathrobe/Slippers</label>
-            </div>
+        <input
+          type="checkbox"
+          id="iron_board"
+          name="room_amenities[]"
+          value="Iron/Ironing Board"
+        />
+        <label for="iron_board">Iron/Ironing Board</label><br />
 
-            <div>
-              <input type="checkbox" id="other_amenities" name="room_amenities[]" value="Other" />
-              <label for="other_amenities">Other</label>
-              <input type="text" id="other_amenities_text" name="other_amenities_text" placeholder="Please specify" />
-            </div>
-          </div>
-        </div>
-        <div class="form-child">
-          <label>Additional Services (Check all that apply):</label>
-          <div class="checkbox">
-            <div>
-              <input type="checkbox" id="concierge" name="additional_services[]" value="Concierge" />
-              <label for="concierge">Concierge</label>
-            </div>
+        <input
+          type="checkbox"
+          id="hairdryer"
+          name="room_amenities[]"
+          value="Hairdryer"
+        />
+        <label for="hairdryer">Hairdryer</label><br />
 
-            <div>
-              <input type="checkbox" id="tour_desk" name="additional_services[]" value="Tour Desk" />
-              <label for="tour_desk">Tour Desk</label>
-            </div>
+        <input
+          type="checkbox"
+          id="bathrobe_slippers"
+          name="room_amenities[]"
+          value="Bathrobe/Slippers"
+        />
+        <label for="bathrobe_slippers">Bathrobe/Slippers</label><br />
 
-            <div>
-              <input type="checkbox" id="currency_exchange" name="additional_services[]" value="Currency Exchange" />
-              <label for="currency_exchange">Currency Exchange</label>
-            </div>
+        <input
+          type="checkbox"
+          id="other_amenities"
+          name="room_amenities[]"
+          value="Other"
+        />
+        <label for="other_amenities">Other</label>
+        <input
+          type="text"
+          id="other_amenities_text"
+          name="other_amenities_text"
+          placeholder="Please specify"
+        /><br />
 
-            <div>
-              <input type="checkbox" id="car_rental" name="additional_services[]" value="Car Rental" />
-              <label for="car_rental">Car Rental</label>
-            </div>
+        <label>Additional Services (Check all that apply):</label><br />
+        <input
+          type="checkbox"
+          id="concierge"
+          name="additional_services[]"
+          value="Concierge"
+        />
+        <label for="concierge">Concierge</label><br />
 
-            <div>
-              <input type="checkbox" id="ticket_service" name="additional_services[]" value="Ticket Service" />
-              <label for="ticket_service">Ticket Service</label>
-            </div>
+        <input
+          type="checkbox"
+          id="tour_desk"
+          name="additional_services[]"
+          value="Tour Desk"
+        />
+        <label for="tour_desk">Tour Desk</label><br />
 
-            <div>
-              <input type="checkbox" id="luggage_storage" name="additional_services[]" value="Luggage Storage" />
-              <label for="luggage_storage">Luggage Storage</label>
-            </div>
+        <input
+          type="checkbox"
+          id="currency_exchange"
+          name="additional_services[]"
+          value="Currency Exchange"
+        />
+        <label for="currency_exchange">Currency Exchange</label><br />
 
-            <div>
-              <input type="checkbox" id="front_desk" name="additional_services[]" value="24-hour Front Desk" />
-              <label for="front_desk">24-hour Front Desk</label>
-            </div>
+        <input
+          type="checkbox"
+          id="car_rental"
+          name="additional_services[]"
+          value="Car Rental"
+        />
+        <label for="car_rental">Car Rental</label><br />
 
-            <div>
-              <input
-                type="checkbox"
-                id="express_checkin_checkout"
-                name="additional_services[]"
-                value="Express Check-in/Check-out"
-              />
-              <label for="express_checkin_checkout">Express Check-in/Check-out</label>
-            </div>
+        <input
+          type="checkbox"
+          id="ticket_service"
+          name="additional_services[]"
+          value="Ticket Service"
+        />
+        <label for="ticket_service">Ticket Service</label><br />
 
-            <div>
-              <input
-                type="checkbox"
-                id="atm_cash_machine"
-                name="additional_services[]"
-                value="ATM/Cash Machine on site"
-              />
-              <label for="atm_cash_machine">ATM/Cash Machine on site</label>
-            </div>
+        <input
+          type="checkbox"
+          id="luggage_storage"
+          name="additional_services[]"
+          value="Luggage Storage"
+        />
+        <label for="luggage_storage">Luggage Storage</label><br />
 
-            <div>
-              <input
-                type="checkbox"
-                id="babysitting_child_services"
-                name="additional_services[]"
-                value="Babysitting/Child Services"
-              />
-              <label for="babysitting_child_services">Babysitting/Child Services</label>
-            </div>
+        <input
+          type="checkbox"
+          id="front_desk"
+          name="additional_services[]"
+          value="24-hour Front Desk"
+        />
+        <label for="front_desk">24-hour Front Desk</label><br />
 
-            <div>
-              <input type="checkbox" id="newspapers" name="additional_services[]" value="Newspapers" />
-              <label for="newspapers">Newspapers</label>
-            </div>
+        <input
+          type="checkbox"
+          id="express_checkin_checkout"
+          name="additional_services[]"
+          value="Express Check-in/Check-out"
+        />
+        <label for="express_checkin_checkout">Express Check-in/Check-out</label
+        ><br />
 
-            <div>
-              <input type="checkbox" id="other_services" name="additional_services[]" value="Other" />
-              <label for="other_services">Other</label>
-              <input type="text" id="other_services_text" name="other_services_text" placeholder="Please specify" />
-            </div>
-          </div>
-        </div>
-        <div class="form-child">
-          <label for="attractions">Nearby Attractions/Points of Interest:</label>
-          <textarea
-            id="attractions"
-            name="attractions"
-            rows="4"
-            cols="50"
-            placeholder="Enter nearby attractions/points of interest"
-          ></textarea>
-        </div>
-        <div class="form-child">
-          <label for="special_offers">Special Offers/Promotions (if any):</label>
-          <textarea
-            id="special_offers"
-            name="special_offers"
-            rows="4"
-            cols="50"
-            placeholder="Enter special offers/promotions"
-          ></textarea>
-        </div>
-        <input type="submit" value="Submit" class="submit bg-red text-primary-400 px-2py-6" />
+        <input
+          type="checkbox"
+          id="atm_cash_machine"
+          name="additional_services[]"
+          value="ATM/Cash Machine on site"
+        />
+        <label for="atm_cash_machine">ATM/Cash Machine on site</label><br />
+
+        <input
+          type="checkbox"
+          id="babysitting_child_services"
+          name="additional_services[]"
+          value="Babysitting/Child Services"
+        />
+        <label for="babysitting_child_services"
+          >Babysitting/Child Services</label
+        ><br />
+
+        <input
+          type="checkbox"
+          id="newspapers"
+          name="additional_services[]"
+          value="Newspapers"
+        />
+        <label for="newspapers">Newspapers</label><br />
+
+        <input
+          type="checkbox"
+          id="other_services"
+          name="additional_services[]"
+          value="Other"
+        />
+        <label for="other_services">Other</label>
+        <input
+          type="text"
+          id="other_services_text"
+          name="other_services_text"
+          placeholder="Please specify"
+        /><br />
+
+        <label for="attractions">Nearby Attractions/Points of Interest:</label
+        ><br />
+        <textarea
+          id="attractions"
+          name="attractions"
+          rows="4"
+          cols="50"
+          placeholder="Enter nearby attractions/points of interest"
+        ></textarea>
+
+        <label for="special_offers">Special Offers/Promotions (if any):</label
+        ><br />
+        <textarea
+          id="special_offers"
+          name="special_offers"
+          rows="4"
+          cols="50"
+          placeholder="Enter special offers/promotions"
+        ></textarea>
+
+        <input
+          type="submit"
+          value="Submit"
+          class="submit bg-red text-primary-400 px-2py-6"
+        />
       </form>
     </div>
   </body>

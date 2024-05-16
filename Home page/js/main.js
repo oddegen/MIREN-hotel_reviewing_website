@@ -32,10 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// form.addEventListener('submit', () => {
-//   e.preventDefault()
-// })
-
 searchBtn.addEventListener("click", async (e) => {
   e.preventDefault();
   let value = form.children[0].children[1].value;

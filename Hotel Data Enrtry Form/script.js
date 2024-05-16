@@ -1,10 +1,7 @@
-function submitForm(formElem) {
-  let xhr = XMLHttpRequest();
-  xhr.onload = function () {
-    window.location.href = "../Home page/home.html";
-  };
-  xhr.open(formElem.method, formElem.getAttribute("action"));
-  xhr.send(new FormData(formElem));
+const form = document.querySelector("#form");
 
-  return false;
-}
+form.addEventListener("submit", () => {
+  setTimeout(() => {
+    window.location.href = "../Home page/home.html";
+  }, 2000);
+});

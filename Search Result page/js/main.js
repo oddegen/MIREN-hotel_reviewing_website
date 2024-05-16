@@ -27,21 +27,22 @@ let searchResults = JSON.parse(sessionStorage.getItem("search"));
 
 const pShow = document.querySelector(".p-show");
 
-pShow.innerHTML =
-  searchResults.length === 0
-    ? "No result"
-    : `Showing <span>10</span> results for <span>${searchResults[0]["hotel_location"]}</span>`;
-
 //Building search functionalities
-let localResult = searchResults;
-
 const showResults = () => {
+  results.innerHTML = "";
+
+  pShow.innerHTML =
+    localResult.length === 0
+      ? "No result"
+      : `Showing <span>10</span> results for <span>${searchResults[0]["hotel_location"]}</span>`;
+
   if (localResult.length !== 0) {
     localResult.forEach((result) => {
-      console.log(result);
+      // console.log(result);
       // Create container div
       const hotelInfoDiv = document.createElement("div");
-      hotelInfoDiv.className = "hotel-info flex-container bg-white round br-shadow mr-bottom400 relative";
+      hotelInfoDiv.className =
+        "hotel-info flex-container bg-white round br-shadow mr-bottom400 relative";
 
       // Create photo container
       const photoContDiv = document.createElement("div");
@@ -68,12 +69,18 @@ const showResults = () => {
       // Create star ratings
       const starContainer = document.createElement("div");
       for (let i = 0; i < 5; i++) {
-        const starSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        const starSvg = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "svg"
+        );
         starSvg.setAttribute("class", "star");
         starSvg.setAttribute("height", "8");
         starSvg.setAttribute("width", "10");
         starSvg.setAttribute("viewBox", "0 0 384 512");
-        const starPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        const starPath = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "path"
+        );
         starPath.setAttribute("fill", "red");
         starPath.setAttribute(
           "d",
@@ -94,19 +101,27 @@ const showResults = () => {
       // Create distance from city center
       const locDiv = document.createElement("div");
       const distanceP = document.createElement("p");
-      distanceP.innerHTML = `<span>${Math.random() * 67}</span> <span>km</span> from city center`;
+      distanceP.innerHTML = `<span>${
+        Math.random() * 67
+      }</span> <span>km</span> from city center`;
 
       // Create show on map link
       const showOnMapP = document.createElement("p");
       showOnMapP.className = "link";
       const showOnMapA = document.createElement("a");
       showOnMapA.href = "./map.html";
-      const showOnMapSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      const showOnMapSvg = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "svg"
+      );
       showOnMapSvg.setAttribute("class", "loc-svg");
       showOnMapSvg.setAttribute("height", "12");
       showOnMapSvg.setAttribute("width", "8");
       showOnMapSvg.setAttribute("viewBox", "0 0 384 512");
-      const showOnMapPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      const showOnMapPath = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "path"
+      );
       showOnMapPath.setAttribute("fill", "red");
       showOnMapPath.setAttribute(
         "d",
@@ -143,7 +158,7 @@ const showResults = () => {
       ratingSectionDiv.className = "flex-container gap-1x";
       const ratingDiv = document.createElement("div");
       ratingDiv.className = "rating bg-red round p-2";
-      ratingDiv.textContent = `${Math.random * 5 + 1}`;
+      ratingDiv.textContent = `${Math.round(Math.random() * 5 + 1)}`;
       const ratingInfoDiv = document.createElement("div");
       const ratingHeader = document.createElement("h5");
       ratingHeader.textContent = "Good";
@@ -176,7 +191,8 @@ const showResults = () => {
 
       // Create book button
       const bookButton = document.createElement("a");
-      bookButton.className = "bg-red px-6py-2 absolute top-right round text-primary-400";
+      bookButton.className =
+        "bg-red px-6py-2 absolute top-right round text-primary-400";
       bookButton.href = "../../Hotel Details page/index.html";
       bookButton.textContent = "Book";
       hotelInfoDiv.appendChild(bookButton);
@@ -191,7 +207,9 @@ const fetchResults = async (e) => {
   e.preventDefault();
   let value = searchForm.children[0].children[1].value;
 
-  let searchResult = await fetch(`http://localhost:3000/hotels?hotel_location=${value}`)
+  let searchResult = await fetch(
+    `http://localhost:3000/hotels?hotel_location=${value}`
+  )
     .then((res) => res.json())
     .catch(() => {
       return [];
@@ -199,6 +217,11 @@ const fetchResults = async (e) => {
 
   localResult = JSON.parse(JSON.stringify(searchResult));
   showResults();
+
+  searchForm;
 };
+
+let localResult = searchResults;
+showResults();
 
 searchForm.addEventListener("submit", fetchResults);
