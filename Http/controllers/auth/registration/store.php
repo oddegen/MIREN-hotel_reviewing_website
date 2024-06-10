@@ -10,7 +10,7 @@ $db = App::resolve(Database::class);
 $username = $_POST["username"];
 $email = $_POST["email"];
 $password = $_POST["password"];
-$current_password = $_POST["current_password"];
+$confirm_password = $_POST["confirm_password"];
 
 
 $errors = [];
@@ -27,7 +27,7 @@ if (!Validator::string($password, 8, 255)) {
     $errors['password'] = 'Please provide a password of at least eight characters.';
 }
 
-if (!Validator::equals($password, $current_password)) {
+if (!Validator::equals($password, $confirm_password)) {
     $errors['current_password'] = 'Please make sure your password match.';
 }
 

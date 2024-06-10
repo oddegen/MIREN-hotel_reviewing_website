@@ -1,8 +1,5 @@
 <?php
 
-use Core\Authenticator;
-
-
 $router->get("/", 'index.php');
 
 $router->get("/search", 'hotels/search.php');
@@ -16,3 +13,7 @@ $router->post("/login", "auth/session/store.php")->only('guest');
 $router->delete("/logout", "auth/session/destroy.php")->only('auth');
 
 $router->get("/forgot-password", "auth/forgot-password/create.php");
+$router->post("/forgot-password", "auth/forgot-password/store.php");
+
+$router->get("/reset-password/:id", "auth/reset-password/create.php");
+$router->post("/reset-password/:id", "auth/reset-password/store.php");
