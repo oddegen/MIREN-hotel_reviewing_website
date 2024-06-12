@@ -2,73 +2,67 @@
 <?php require('partials/nav.view.php') ?>
 
   <main>
-        <section class="relative bg-cover bg-center h-96" style="background-image: url('https://via.placeholder.com/1920x1080');">
+        <section class="relative bg-cover bg-center h-96" style="background-image: url('/assets/images/visualsofdana-T5pL6ciEn-I-unsplash.png');">
             <div class="container mx-auto px-6 h-full flex items-center justify-center">
                 <div class="text-center text-white">
-                    <h1 class="text-4xl font-bold mb-4">Find your perfect hotel with HotelVista</h1>
-                    <p class="mb-8">Over 1 million rooms worldwide are waiting for you!</p>
+                    <h1 class="text-4xl font-bold mb-4 text-black">Find your perfect hotel with Miren</h1>
+                    <p class="mb-8 text-black">Over <?= $total_rooms ?> rooms worldwide are waiting for you!</p>
                     <div class="bg-white bg-opacity-90 p-4 rounded-lg inline-block">
-                        <form class="flex space-x-4" action="/search">
-                            <input type="text" name="location" placeholder="Location" class="border rounded p-2 flex-1 text-black">
-                            <input type="date" name="check-in-date" placeholder="Check-in date" class="border rounded p-2 text-black">
-                            <input type="date" name="check-out-date" placeholder="Check-out date" class="border rounded p-2 text-black">
-                            <input type="number" name="number-of-guests" placeholder="Number of guests" class="border rounded p-2 text-black" min="1" max="20">
-                            <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded">></button>
+                        <form action="/search">
+                            <?php view("partials/search.view.php") ?>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="container mx-5 px-6 py-12">
-            <h2 class="text-2xl font-bold mb-6">Explore popular destinations</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-                <div class="relative">
-                    <img src="https://via.placeholder.com/400x300" alt="Paris" class="rounded-lg">
-                    <div class="absolute bottom-2 left-2 bg-gray-800 bg-opacity-75 text-white px-2 py-1 rounded">Paris</div>
-                </div>
-                <div class="relative">
-                    <img src="https://via.placeholder.com/400x300" alt="London" class="rounded-lg">
-                    <div class="absolute bottom-2 left-2 bg-gray-800 bg-opacity-75 text-white px-2 py-1 rounded">London</div>
-                </div>
-                <div class="relative">
-                    <img src="https://via.placeholder.com/400x300" alt="Tokyo" class="rounded-lg">
-                    <div class="absolute bottom-2 left-2 bg-gray-800 bg-opacity-75 text-white px-2 py-1 rounded">Tokyo</div>
-                </div>
-                <div class="relative">
-                    <img src="https://via.placeholder.com/400x300" alt="Rome" class="rounded-lg">
-                    <div class="absolute bottom-2 left-2 bg-gray-800 bg-opacity-75 text-white px-2 py-1 rounded">Rome</div>
-                </div>
-                <div class="relative">
-                    <img src="https://via.placeholder.com/400x300" alt="Barcelona" class="rounded-lg">
-                    <div class="absolute bottom-2 left-2 bg-gray-800 bg-opacity-75 text-white px-2 py-1 rounded">Barcelona</div>
-                </div>
-                <div class="relative">
-                    <img src="https://via.placeholder.com/400x300" alt="New York" class="rounded-lg">
-                    <div class="absolute bottom-2 left-2 bg-gray-800 bg-opacity-75 text-white px-2 py-1 rounded">New York</div>
-                </div>
-            </div>
-        </section>
-        <section class="container mx-5 px-6 py-12">
+    <section class="container mx-5 px-6 py-12">
+    <h2 class="text-2xl font-bold mb-6">Explore popular destinations</h2>
+    <div class="grid grid-cols-[repeat(4,_minmax(10%,_1fr))] auto-rows-[155px] gap-3">
+        <div class="relative row-[1/3]">
+            <img src="/assets/images/small/redd-f-nTBW1cOY1qI-unsplash.jpg" alt="Paris" class="rounded-lg h-full w-full object-cover" style="border-radius: 10px;">
+            <div class="absolute bottom-2 left-2 bg-gray-800 bg-opacity-75 text-white px-2 py-1 rounded">Paris</div>
+        </div>
+        <div class="relative">
+            <img src="/assets/images/small/aurelien-romain-zHth1uFXV6I-unsplash.jpg" alt="London" class="rounded-lg h-full w-full object-cover">
+            <div class="absolute bottom-2 left-2 bg-gray-800 bg-opacity-75 text-white px-2 py-1 rounded">London</div>
+        </div>
+        <div class="relative row-[1/3] col-[3/4]">
+            <img src="/assets/images/small/jason-leung-yux412uKpG0-unsplash.jpg" alt="Tokyo" class="rounded-lg h-full w-full object-cover">
+            <div class="absolute bottom-2 left-2 bg-gray-800 bg-opacity-75 text-white px-2 py-1 rounded">Tokyo</div>
+        </div>
+        <div class="relative">
+            <img src="/assets/images/small/gaddafi-rusli-2ueUnL4CkV8-unsplash.jpg" alt="Rome" class="rounded-lg h-full w-full object-cover">
+            <div class="absolute bottom-2 left-2 bg-gray-800 bg-opacity-75 text-white px-2 py-1 rounded">Rome</div>
+        </div>
+        <div class="relative">
+            <img src="/assets/images/small/jonathan-chng-7_WyzplsaSE-unsplash.jpg" alt="Barcelona" class="rounded-lg h-full w-full object-cover">
+            <div class="absolute bottom-2 left-2 bg-gray-800 bg-opacity-75 text-white px-2 py-1 rounded">Barcelona</div>
+        </div>
+        <div class="relative">
+            <img src="/assets/images/small/pietro-de-grandi-T7K4aEPoGGk-unsplash.jpg" alt="New York" class="rounded-lg h-full w-full object-cover">
+            <div class="absolute bottom-2 left-2 bg-gray-800 bg-opacity-75 text-white px-2 py-1 rounded">New York</div>
+        </div>
+    </div>
+</section>
+
+    <section class="container mx-5 px-6 py-6">
     <h2 class="text-2xl font-bold mb-6">Top-rated hotels by guests</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-        <?php for ($i=0; $i < 5; $i++): ?>
+        <?php foreach ($hotels as $hotel): ?>
             <div class="relative bg-white rounded-lg shadow-lg overflow-hidden">
               <img src="https://via.placeholder.com/300x200" alt="Soho Hotel" class="w-full h-48 object-cover">
               <div class="p-4">
-                  <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded">9.6</div>
-                  <h3 class="font-bold text-lg">Soho Hotel</h3>
-                  <p class="text-gray-600">London</p>
-                  <p class="font-semibold mt-2">Starting from $130/night</p>
+                  <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded"><?= $hotel['rating'] ?></div>
+                  <h3 class="font-bold text-lg"><?= $hotel['name'] ?></h3>
+                  <p class="text-gray-600"><?= $hotel['location'] ?></p>
+                  <p class="font-semibold mt-2">Starting from $<?= $hotel['price'] ?></p>
               </div>
-              <button class="absolute top-2 right-2 bg-white text-gray-800 p-1 rounded-full">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 5.121A7.953 7.953 0 0012 4c2.209 0 4.209.897 5.656 2.344A7.953 7.953 0 0020 12c0 2.209-.897 4.209-2.344 5.656A7.953 7.953 0 0112 20a7.953 7.953 0 01-5.656-2.344A7.953 7.953 0 014 12c0-2.209.897-4.209 2.344-5.656z"></path>
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12l-3-3m0 0l-3 3m3-3v12"></path>
-                  </svg>
+              <button class="absolute top-2 right-2 bg-white text-gray-800 p-1 rounded-full w-8 h-8">
+                  <img src="/assets/images/heart.svg" alt="like">
               </button>
             </div>
-        <?php endfor; ?>
+        <?php endforeach; ?>
     </div>
 </section>
 

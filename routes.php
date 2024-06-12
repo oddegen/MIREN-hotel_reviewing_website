@@ -3,6 +3,7 @@
 $router->get("/", 'index.php');
 
 $router->get("/search", 'hotels/search.php');
+$router->get("/hotel/:id", 'hotels/show.php');
 
 //auth
 $router->get("/register", "auth/registration/create.php")->only('guest');

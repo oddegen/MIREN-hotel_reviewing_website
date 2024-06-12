@@ -51,14 +51,14 @@ class Database
         }
     }
 
-    public function get()
+    public function get($mode = PDO::FETCH_ASSOC)
     {
-        return $this->statement->fetchAll();
+        return $this->statement->fetchAll($mode);
     }
 
-    public function find()
+    public function find($mode = PDO::FETCH_ASSOC)
     {
-        return $this->statement->fetch();
+        return $this->statement->fetch($mode);
     }
 
     public function findOrFail()
@@ -70,5 +70,16 @@ class Database
         }
 
         return $result;
+    }
+
+    public function prepare($query) {
+        try {
+            $this->statement = $this->connection->prepare($query);
+
+
+            return $this->statement;
+        } catch (PDOException $e) {
+            throw new PDOException("Database failure, " . $e->getMessage());
+        }
     }
 }
