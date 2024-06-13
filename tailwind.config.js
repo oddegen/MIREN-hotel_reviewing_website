@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./views/**/*.{html,php}"],
   theme: {
-    extend: {},
+    extend: {
+      "backgroundColor": {
+        "primary": "#ef4444"
+      }
+    },
   },
   plugins: [
     require('@tailwindcss/forms')

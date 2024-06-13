@@ -5,6 +5,9 @@ $router->get("/", 'index.php');
 $router->get("/search", 'hotels/search.php');
 $router->get("/hotel/:id", 'hotels/show.php');
 
+$router->get("/faq", 'faq.php');
+$router->get("/about", 'about.php');
+
 //auth
 $router->get("/register", "auth/registration/create.php")->only('guest');
 $router->post("/register", "auth/registration/store.php")->only('guest');

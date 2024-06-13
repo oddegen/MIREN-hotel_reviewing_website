@@ -1,16 +1,15 @@
 <?php
 
+use App\Models\User;
 use Core\App;
 use Core\Validator;
 use Core\Authenticator;
 use Core\Database;
 
-$db = App::resolve(Database::class);
-
-$username = $_POST["username"];
-$email = $_POST["email"];
-$password = $_POST["password"];
-$confirm_password = $_POST["confirm_password"];
+$username = Validator::sanitize($_POST["username"]);
+$email = Validator::sanitize($_POST["email"]);
+$password = Validator::sanitize($_POST["password"]);
+$confirm_password = Validator::sanitize($_POST["confirm_password"]);
 
 
 $errors = [];
@@ -31,11 +30,12 @@ if (!Validator::equals($password, $confirm_password)) {
     $errors['current_password'] = 'Please make sure your password match.';
 }
 
-$user = $db->query('select * from users where email = :email', [
-    'email' => $email
-])->find();
+$db = App::resolve(Database::class);
+$user = new User($db);
 
-if ($user) {
+
+
+if ($user->findByEmail($email)) {
     $errors["email"] = 'A user account with this email already exists';
 }
 
@@ -48,15 +48,7 @@ if (!empty($errors)) {
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 try {
-    $user = $db->query(
-        'INSERT INTO users(email, password, username, role_id) SELECT :email, :password, :username, r.role_id FROM roles r WHERE r.role_name=:role_name',
-        [
-            'email' => $email,
-            'password' => $hashed_password,
-            'username' => $username,
-            'role_name' => 'Individual_User'
-        ],
-    );
+    $user->createUser($email, $hashed_password, $username);
 
     (new Authenticator)->login(['email' => $email]);
 

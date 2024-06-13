@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Hotel;
 use Core\App;
 use Core\Database;
 use Core\Validator;
@@ -25,13 +26,9 @@ $location = "";
 $check_in_date = "";
 $check_out_date = "";
 $number_of_guests = "";
-
 $selected_amenities = $_GET["amenities"] ?? [];
 $selected_nightly_rate = $_GET["nightly_rate"] ?? [];
 $selected_guest_satisfaction = $_GET["guest_satisfaction"] ?? [];
-
-$current_page;
-
 
 $errors = [];
 
@@ -40,12 +37,9 @@ if (!empty($_GET)) {
     $check_in_date = Validator::sanitize($_GET['check_in_date']);
     $check_out_date = Validator::sanitize($_GET['check_out_date']);
     $number_of_guests = Validator::sanitize($_GET['number_of_guests']);
-
     $selected_amenities = array_map('Core\Validator::sanitize', $selected_amenities);
     $selected_nightly_rate = array_map('Core\Validator::sanitize', $selected_nightly_rate);
     $selected_guest_satisfaction = array_map('Core\Validator::sanitize', $selected_guest_satisfaction);
-
-    $current_page = Validator::sanitize($_GET['page']);
 
     if (!Validator::exists($location)) {
         $errors['location']['required'] = "required.";
@@ -112,57 +106,15 @@ if (!empty($errors)) {
 
         'errors' => $errors
     ]);
-
-    
 }
 
-$current_page = Validator::number($current_page) ? intval($current_page) : 1;
-    $total_no_results = $db->query("SELECT COUNT(*) AS total_hotels FROM hotels h JOIN rooms r ON h.hotel_id = r.hotel_id WHERE h.location=:location", [
-        'location' => $location
-    ])->find(PDO::FETCH_COLUMN);
+$hotel = new Hotel($db);
 
-    $num_of_results_per_page = 5;
+$current_page = Validator::number($_COOKIE['page']) ? intval($_COOKIE['page']) : 1;
+$total_no_results = $hotel->countHotelsByLocation($location);
+$num_of_results_per_page = 5;
 
-    $sql = "SELECT
-            h.name AS hotel_name,
-            GROUP_CONCAT(DISTINCT a.name ORDER BY a.name SEPARATOR ', ') AS amenities_names,
-            h.rating,
-            MIN(r.price_per_night) AS price,
-            r.name AS room_type,
-            r.bed_type,
-            r.number_of_beds ,
-            r.number_of_bathrooms,
-            i.image_url
-        FROM 
-            hotels h
-        JOIN 
-            hotel_amenity ha ON h.hotel_id = ha.hotel_id
-        JOIN 
-            amenities a ON ha.amenity_id = a.amenity_id
-        JOIN 
-            rooms r ON h.hotel_id = r.hotel_id
-        JOIN 
-            room_images ri ON h.hotel_id = ri.room_id 
-        JOIN 
-            images i ON ri.image_id = i.image_id AND i.base_image = 1
-        WHERE
-            h.location = :location
-        GROUP BY 
-            h.hotel_id, r.room_id, i.image_url 
-        ORDER BY 
-            h.rating DESC, price ASC
-        LIMIT :limit OFFSET :offset;
-";
-
-    $stmt = $db->prepare($sql);
-    $stmt->bindParam(':location', $location, PDO::PARAM_STR);
-    $stmt->bindParam(':limit', $num_of_results_per_page, PDO::PARAM_INT);
-
-    $offset = ($current_page - 1) * $num_of_results_per_page;
-    $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
-    $stmt->execute();
-
-    $hotels = $stmt->fetchAll();
+$hotels = $hotel->getHotelsByLocation($location, $num_of_results_per_page, $current_page);
 
 
 view("hotels/listing.view.php", [
@@ -183,5 +135,3 @@ view("hotels/listing.view.php", [
     'num_of_results_per_page' => $num_of_results_per_page,
     'current_page' => $current_page,
 ]);
-
-

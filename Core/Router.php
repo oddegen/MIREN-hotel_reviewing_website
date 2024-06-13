@@ -62,7 +62,7 @@ class Router
 
                 $params = array_filter($matches, 'is_string', ARRAY_FILTER_USE_KEY);
                 extract($params);
-                return require base_path('Http/controllers/' . $route['controller']);
+                return require base_path('app/Http/controllers/' . $route['controller']);
             }
         }
 

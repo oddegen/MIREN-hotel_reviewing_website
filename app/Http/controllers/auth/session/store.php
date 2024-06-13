@@ -7,8 +7,8 @@ use Core\Database;
 
 $db = App::resolve(Database::class);
 
-$email = $_POST["email"];
-$password = $_POST["password"];
+$email = Validator::sanitize($_POST["email"]);
+$password = Validator::sanitize($_POST["password"]);
 
 
 $errors = [];
@@ -23,7 +23,7 @@ if (!Validator::string($password, 8, 255)) {
 try {    
     $isSignedin = (new Authenticator)->attempt($email, $password);
     if(!$isSignedin) {
-        $errors['_'] = 'No matching account found for that email address and password.';
+        $errors['_'] = 'Login failed; Invalid email or password."';
     }
 } catch (Exception $e) {
     error_log("Error: ". $e);

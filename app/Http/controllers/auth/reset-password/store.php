@@ -1,13 +1,14 @@
 <?php
 
+use App\Models\User;
 use Core\App;
 use Core\Validator;
 use Core\Database;
 
 $db = App::resolve(Database::class);
 
-$new_password = $_POST["new_password"];
-$confirm_password = $_POST["confirm_password"];
+$new_password = Validator::sanitize($_POST["new_password"]);
+$confirm_password = Validator::sanitize($_POST["confirm_password"]);
 
 
 $errors = [];
@@ -30,13 +31,7 @@ if (!empty($errors)) {
 $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
 
 try {
-    $user = $db->query(
-        'UPDATE users SET password=:password WHERE md5(`user_id`)=:id',
-        [
-            'password' => $hashed_password,
-            'id' => $id
-        ],
-    );
+    (new User(App::resolve(Database::class)))->updatePassword($id, $hashed_password);
 
     redirect("/login");
 } catch (PDOException $e) {
