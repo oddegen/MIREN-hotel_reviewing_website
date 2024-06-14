@@ -5,11 +5,12 @@ namespace Core;
 use Exception;
 use PDO;
 use PDOException;
+use PDOStatement;
 
 class Database
 {
     public $connection;
-    public $statement;
+    public PDOStatement $statement;
 
     public function __construct($config, $username = 'root', $password = '')
     {
@@ -81,5 +82,9 @@ class Database
         } catch (PDOException $e) {
             throw new PDOException("Database failure, " . $e->getMessage());
         }
+    }
+
+    public function id() {
+        return $this->connection->lastInsertId();
     }
 }

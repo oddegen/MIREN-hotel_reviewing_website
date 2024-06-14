@@ -72,7 +72,7 @@
             <h3 class="text-xl font-bold">Exclusive Offer!</h3>
             <p class="text-gray-600">Want to receive exclusive offers and the best prices for your dream stays? Sign up now to join our Travel Club!</p>
         </div>
-        <a href="/register" class="bg-red-500 text-white px-6 py-3 rounded">Sign up</a>
+        <a href="/register?hotel=true" class="bg-red-500 text-white px-6 py-3 rounded">Sign up</a>
     </div>
 </section>
 

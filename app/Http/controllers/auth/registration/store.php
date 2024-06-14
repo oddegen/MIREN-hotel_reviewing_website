@@ -41,16 +41,27 @@ if ($user->findByEmail($email)) {
 
 if (!empty($errors)) {
     return view('auth/registration/create.php', [
-        'errors' => $errors
+        'errors' => $errors,
+        'type' => $_POST["_type"] == "Hotel" ? 1 : 0
     ]);
 }
 
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 try {
-    $user->createUser($email, $hashed_password, $username);
+    if ($_POST["_type"] == "Hotel") {
+        $user->createUser($email, $hashed_password, $username, 'Hotel_User');
+    } else {
+        $user->createUser($email, $hashed_password, $username);
+    }
 
     (new Authenticator)->login(['email' => $email]);
+
+
+    if ($_POST["_type"] == "Hotel") {
+        $id = $user->findByEmail($email)['uuid'];
+        redirect("/hotels/hotel/{$id}");
+    }
 
     redirect("/");
 } catch (PDOException $e) {

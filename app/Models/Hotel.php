@@ -88,4 +88,31 @@ class Hotel {
     public function countTotalRooms() {
         return $this->_db->query('SELECT count(*) AS total_no_rooms FROM rooms')->find(PDO::FETCH_COLUMN);
     }
+
+    public function createHotel($name, $location, $description, $image_url) {
+        $hotel_id = $this->db->query(
+            'INSERT INTO hotels (name, location, description) VALUES (:name, :location, :description)',
+            [
+                'name' => $name,
+                'location' => $location,
+                'description' => $description
+            ]
+        )->id();
+
+        $image_id = $this->db->query(
+            'INSERT INTO images (image_url, base_image) VALUES (:image_url, :base_image)',
+            [
+                'name' => $image_url,
+                'base_image' => true
+            ]
+        )->id();
+
+        $this->db->query(
+            'INSERT INTO hotel_images (hotel_id, image_id) VALUES (:hotel_id, :image_id)',
+            [
+                'hotel_id' => $hotel_id,
+                'image_id' => $image_id
+            ]
+        );
+    }
 }

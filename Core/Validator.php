@@ -41,7 +41,7 @@ class Validator
     }
 
     public static function username($value) {
-            return preg_match('/^[A-Za-z0-9_]{4,20}$/', $value);
+            return preg_match('/^[A-Za-z0-9_ ]{4,20}$/', $value);
     }
 
     public static function date($date, $format = 'Y-m-d H:i:s') {
@@ -70,4 +70,18 @@ class Validator
             return true;
         }
     }
+
+    public static function fileType($uploadedFile, $allowedfileExtensions) {
+            $fileName = $uploadedFile['name'];
+            $fileNameCmps = explode(".", $fileName);
+            $fileExtension = strtolower(end($fileNameCmps));    
+        
+            return in_array($fileExtension, $allowedfileExtensions);
+    }
+
+    public static function fileSize($uploadedFile, $maxFileSize) {
+        $fileSize = $uploadedFile['size'];
+
+        return $fileSize < $maxFileSize;
+}
 }

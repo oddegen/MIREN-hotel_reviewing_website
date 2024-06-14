@@ -2,6 +2,7 @@
 
 namespace Core;
 
+use App\Models\User;
 use Exception;
 
 class Authenticator
@@ -10,10 +11,7 @@ class Authenticator
     {
 
         try {
-            $user = App::resolve(Database::class)
-            ->query('select * from users where email = :email', [
-            'email' => $email
-        ])->find();
+            $user = (new User(App::resolve(Database::class)))->findByEmail($email);
 
         if ($user) {
             if (password_verify($password, $user['password'])) {

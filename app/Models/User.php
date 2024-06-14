@@ -21,13 +21,14 @@ class User {
 
     public function createUser($email, $hashed_password, $username, $role_name = 'Individual_User') {
         $this->_db->query(
-            'INSERT INTO users(email, password, username, role_id) 
-             SELECT :email, :password, :username, r.role_id 
+            'INSERT INTO users(email, password, username, uuid, role_id) 
+             SELECT :email, :password, :username, :uuid, r.role_id 
              FROM roles r WHERE r.role_name = :role_name',
             [
                 'email' => $email,
                 'password' => $hashed_password,
                 'username' => $username,
+                'uuid' => uniqidReal(),
                 'role_name' => $role_name
             ]
         );
@@ -53,5 +54,12 @@ class User {
         ])->find(PDO::FETCH_COLUMN);
 
         return $exists;
+    }
+
+    public function findByUUID($uuid) {
+        $user = $this->_db->query('SELECT * FROM users WHERE uuid = :uuid', [
+            'uuid' => $uuid
+        ])->find();
+        return $user;
     }
 }

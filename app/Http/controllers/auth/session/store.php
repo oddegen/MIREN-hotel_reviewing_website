@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Core\App;
 use Core\Validator;
 use Core\Authenticator;
@@ -32,9 +33,14 @@ try {
 
 if (!empty($errors)) {
     return view('auth/session/create.php', [
-        'errors' => $errors
+        'errors' => $errors,
+        'type' => $_POST["_type"] == "Hotel" ? 1 : 0
     ]);
 }
 
+if ($_POST["_type"] == "Hotel") {
+    $id = (new User($db))->findByEmail($email)['uuid'];
+    redirect("/hotels/hotel/{$id}");
+}
 
 redirect("/");
