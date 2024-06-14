@@ -7,7 +7,7 @@
           <div class="w-full px-4">
             <div class="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
               <span class="mb-2 block text-lg font-semibold text-primary">
-                Our Services
+                Our Mission
               </span>
               <h2
                 class="mb-3 text-3xl font-bold leading-[1.2] text-dark sm:text-4xl md:text-[40px] dark:text-white"
@@ -15,8 +15,7 @@
                 What We Offer
               </h2>
               <p class="text-base text-body-color dark:text-dark-6">
-                There are many variations of passages of Lorem Ipsum available
-                but the majority have suffered alteration in some form.
+              At Miren, we are dedicated to helping travelers make informed decisions by providing honest, in-depth, and up-to-date reviews of hotels worldwide. Our mission is to ensure that your stay is nothing short of perfect.
               </p>
             </div>
           </div>
@@ -45,11 +44,10 @@
               <h4
                 class="mb-[14px] text-2xl font-semibold text-dark dark:text-white"
               >
-                Refreshing Design
+              In-depth Reviews
               </h4>
               <p class="text-body-color dark:text-dark-6">
-                We dejoy working with discerning clients, people for whom
-                qualuty, service, integrity & aesthetics.
+              We dive deep into the details to bring you thorough reviews of hotels, including amenities, service quality, and overall experience.
               </p>
             </div>
           </div>
@@ -78,11 +76,10 @@
               <h4
                 class="mb-[14px] text-2xl font-semibold text-dark dark:text-white"
               >
-                Based on Tailwind CSS
+              User-generated Content
               </h4>
               <p class="text-body-color dark:text-dark-6">
-                We dejoy working with discerning clients, people for whom
-                qualuty, service, integrity & aesthetics.
+              Our platform thrives on the contributions of our vibrant community. Share your experiences and read reviews from fellow travelers.
               </p>
             </div>
           </div>
@@ -121,11 +118,10 @@
               <h4
                 class="mb-[14px] text-2xl font-semibold text-dark dark:text-white"
               >
-                100+ Components
+              Customizable Filters
               </h4>
               <p class="text-body-color dark:text-dark-6">
-                We dejoy working with discerning clients, people for whom
-                qualuty, service, integrity & aesthetics.
+              Find the perfect hotel that meets your specific needs with our customizable search filters.
               </p>
             </div>
           </div>
@@ -156,11 +152,10 @@
               <h4
                 class="mb-[14px] text-2xl font-semibold text-dark dark:text-white"
               >
-                Speed Optimized
+              Verified Ratings
               </h4>
               <p class="text-body-color dark:text-dark-6">
-                We dejoy working with discerning clients, people for whom
-                qualuty, service, integrity & aesthetics.
+              All our reviews and ratings are verified to ensure authenticity and reliability.
               </p>
             </div>
           </div>
@@ -187,11 +182,10 @@
               <h4
                 class="mb-[14px] text-2xl font-semibold text-dark dark:text-white"
               >
-                Fully Customizable
+              User-friendly Interface
               </h4>
               <p class="text-body-color dark:text-dark-6">
-                We dejoy working with discerning clients, people for whom
-                qualuty, service, integrity & aesthetics.
+              Our website is designed with a user-friendly interface to make navigation seamless and enjoyable.
               </p>
             </div>
           </div>
@@ -225,8 +219,8 @@
                 Regular Updates
               </h4>
               <p class="text-body-color dark:text-dark-6">
-                We dejoy working with discerning clients, people for whom
-                qualuty, service, integrity & aesthetics.
+                We enjoy working with discerning clients, people for whom
+                quality, service, integrity & aesthetics.
               </p>
             </div>
           </div>
