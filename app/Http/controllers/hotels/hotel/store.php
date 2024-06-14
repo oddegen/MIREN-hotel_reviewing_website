@@ -28,7 +28,7 @@ if (!Validator::string($hotelname, 1, 255)) {
     $errors['hotelname']['length'] = "Hotel name must be between 1 and 255 characters.";
 }
 
-if (!Validator::exists($description )) {
+if (!Validator::exists($description)) {
     $errors['description']['required'] = "Description is required.";
 }
 
@@ -58,7 +58,11 @@ if (isset($img_upload) && $img_upload['error'] === UPLOAD_ERR_OK) {
 if (!empty($errors)) {
     return view("hotels/hotel/create.php", [
         'errors' => $errors,
-        'id' => $id
+        'id' => $id,
+        'hotelname' => $hotelname,
+        'description' => $description,
+        'location' => $location,
+        'street_address' => $street_address
     ]);
 }
 
