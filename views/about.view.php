@@ -1,5 +1,5 @@
-<?php require("partials/head.view.php") ?>
-<?php require("partials/nav.view.php") ?>
+<?php view("partials/head.view.php") ?>
+<?php view("partials/nav.view.php") ?>
 
     <section class="pb-24 pt-24 dark:bg-dark p-10">
       <div class="container mx-auto">
@@ -228,4 +228,4 @@
       </div>
     </section>
 
-<?php require("partials/footer.view.php") ?>
+    <?php view("partials/footer.view.php") ?>

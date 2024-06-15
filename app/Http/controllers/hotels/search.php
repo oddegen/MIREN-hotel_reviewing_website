@@ -91,7 +91,7 @@ if (!empty($_GET)) {
 }
 
 if (!empty($errors)) {
-    return view("hotels/listing.view.php", [
+    return view("hotels/search.php", [
         'location' => $location,
         'check_in_date' => $check_in_date,
         'check_out_date' => $check_out_date,
@@ -114,10 +114,10 @@ $current_page = Validator::number($_COOKIE['page']) ? intval($_COOKIE['page']) :
 $total_no_results = $hotel->countHotelsByLocation($location);
 $num_of_results_per_page = 5;
 
-$hotels = $hotel->getHotelsByLocation($location, $num_of_results_per_page, $current_page);
+$hotels = $hotel->getHotels($location, $num_of_results_per_page, $current_page);
 
 
-view("hotels/listing.view.php", [
+view("hotels/search.php", [
     'location' => $location,
     'check_in_date' => $check_in_date,
     'check_out_date' => $check_out_date,

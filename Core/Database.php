@@ -35,23 +35,6 @@ class Database
         }
     }
 
-    public function transaction($queries) {
-
-        try {
-            $this->connection->beginTransaction();
-    
-            foreach ($queries as $query => $params) {
-                $this->statement = $this->connection->prepare($query);
-                $this->statement->execute($params);
-            }
-    
-            $this->connection->commit();
-        } catch(Exception $e) {
-            $this->connection->rollBack();
-            throw new PDOException("Database failure, " . $e->getMessage());
-        }
-    }
-
     public function get($mode = PDO::FETCH_ASSOC)
     {
         return $this->statement->fetchAll($mode);
@@ -67,7 +50,7 @@ class Database
         $result = $this->find();
 
         if (!$result) {
-            abort();
+            abort(500);
         }
 
         return $result;

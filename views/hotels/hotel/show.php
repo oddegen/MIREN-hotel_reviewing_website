@@ -3,4 +3,6 @@
 
 <a href="/hotels/hotel/<?=$id?>/create">create</a>
 
+<?php print_r($hotels) ?>
+
 <?php view("partials/footer.view.php") ?>

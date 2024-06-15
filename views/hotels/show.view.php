@@ -1,29 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php view("partials/head.view.php") ?>
+<?php view("partials/nav.view.php") ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Norrebro</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-
-<body class="bg-gray-100">
-
-    <nav class="bg-white p-4 shadow">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-xl font-bold">Tripster</div>
-            <div>
-                <a href="#" class="mx-2 text-gray-700 hover:text-gray-900">Properties</a>
-                <a href="#" class="mx-2 text-gray-700 hover:text-gray-900">Attractions</a>
-                <a href="#" class="mx-2 text-gray-700 hover:text-gray-900">Popular</a>
-            </div>
-            <div>
-                <button class="bg-red-500 text-white px-4 py-2 rounded">Sign up</button>
-                <button class="bg-gray-500 text-white px-4 py-2 rounded">Log in</button>
-            </div>
-        </div>
-    </nav>
+    
 
     <div class="container mx-auto mt-8">
         <div class="flex">
@@ -193,6 +171,4 @@
         </div>
     </div>
 
-</body>
-
-</html>
+    <?php view("partials/footer.view.php") ?>

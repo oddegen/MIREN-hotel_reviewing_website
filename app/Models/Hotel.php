@@ -19,7 +19,7 @@ class Hotel {
         return $total_no_results;
     }
 
-    public function getHotelsByLocation($location, $limit, $offset) {
+    public function getHotels($location, $limit, $offset) {
         $sql = "SELECT
                 h.name AS hotel_name,
                 GROUP_CONCAT(DISTINCT a.name ORDER BY a.name SEPARATOR ', ') AS amenities_names,
@@ -91,11 +91,12 @@ class Hotel {
 
     public function createHotel($name, $location, $description, $image_url) {
         $hotel_id = $this->db->query(
-            'INSERT INTO hotels (name, location, description) VALUES (:name, :location, :description)',
+            'INSERT INTO hotels (name, location, description, uuid) VALUES (:name, :location, :description, :uuid)',
             [
                 'name' => $name,
                 'location' => $location,
-                'description' => $description
+                'description' => $description,
+                'uuid' => uniqidReal()
             ]
         )->id();
 
@@ -114,5 +115,15 @@ class Hotel {
                 'image_id' => $image_id
             ]
         );
+    }
+
+    public function deleteHotel($hotel_id) {
+        $this->db->query('DELETE FROM hotels WHERE uuid = :hotel_id', [
+            'hotel_id' => $hotel_id
+        ]);
+    }
+
+    public function getHotelByID($user_id) {
+        $this->db->query('SELECT * FROM hotels')->get();
     }
 }

@@ -9,9 +9,9 @@ $router->get("/faq", 'faq.php');
 $router->get("/about", 'about.php');
 
 $router->get("/hotels/hotel/:id", "hotels/hotel/show.php")->only('auth');
-$router->get("/hotels/hotel/:id/create", "hotels/hotel/create.php");
-$router->post("/hotels/hotel/:id/create", "hotels/hotel/store.php");
-$router->delete("/hotels/hotel/:id/destroy", "hotels/hotel/delete.php");
+$router->get("/hotels/hotel/:id/create", "hotels/hotel/create.php")->only('auth');
+$router->post("/hotels/hotel/:id/create", "hotels/hotel/store.php")->only('auth');
+$router->delete("/hotels/hotel/:user_id/destroy/:id", "hotels/hotel/delete.php")->only('auth');
 
 //auth
 $router->get("/register", "auth/registration/create.php")->only('guest');
